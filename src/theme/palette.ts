@@ -8,7 +8,8 @@ const palette = {
       secondary: "#0E1117",
     },
     background: {
-      main: "#E1E7E9",
+      light: "#EEEEEE",
+      black: "#000000",
     },
   },
 };
