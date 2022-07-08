@@ -2,7 +2,7 @@ const ChakraText = {
   variants: {
     subtitle1: {
       fontSize: "0.875rem",
-      fontWeight: 500,
+      fontWeight: 400,
       lineHeight: "1.57",
       letterSpacing: "0.00625em",
     },
@@ -20,6 +20,11 @@ const ChakraText = {
     overline: {
       fontSize: "0.75rem",
       fontWeight: 400,
+    },
+    menu: {
+      fontSize: "1rem",
+      fontWeight: 600,
+      letterSpacing: "0.2rem",
     },
   },
 };

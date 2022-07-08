@@ -10,6 +10,7 @@ const palette = {
     background: {
       light: "#EEEEEE",
       black: "#000000",
+      grey: "	#555555",
     },
   },
 };
