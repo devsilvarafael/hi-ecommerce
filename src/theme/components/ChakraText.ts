@@ -12,7 +12,7 @@ const ChakraText = {
       lineHeight: "1.167",
     },
     body2: {
-      fontSize: "1rem",
+      fontSize: "2rem",
       fontWeight: 400,
       lineHeight: "1.5",
       letterSpacing: "0.009375em",
