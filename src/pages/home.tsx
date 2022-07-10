@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react";
+import MostSoldProducts from "@components/MostSoldProducts/MostSoldProducts";
 
 const Home = () => (
   <Box
@@ -6,9 +7,9 @@ const Home = () => (
     w="100%"
     flexDirection="column"
     alignItems="center"
-    mt="6rem"
+    mt="3rem"
   >
-    <p>Home</p>
+    <MostSoldProducts />
   </Box>
 );
 
