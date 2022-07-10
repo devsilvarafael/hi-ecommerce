@@ -1,11 +1,12 @@
-import { ChakraProvider, Heading } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import TopMenuBar from "@components/Menu/TopMenuBar";
 import theme from "@theme/index";
+import Home from "@pages/home";
 
 const App = () => (
   <ChakraProvider theme={theme}>
     <TopMenuBar />
-    <Heading variant="h1">Testing Title</Heading>
+    <Home />
   </ChakraProvider>
 );
 

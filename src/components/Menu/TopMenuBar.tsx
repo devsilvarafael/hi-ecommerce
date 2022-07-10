@@ -21,22 +21,22 @@ const TopMenuBar = () => (
       <Text variant="menu">Hi! </Text>
       <Menu>
         <MenuButton as={Text} variant="subtitle1">
-          Notebook 1
+          Computadores
         </MenuButton>
         <MenuButton as={Text} variant="subtitle1">
-          Notebook 2
+          Notebooks
         </MenuButton>
         <MenuButton as={Text} variant="subtitle1">
-          Notebook 3
+          Acessórios
         </MenuButton>
         <MenuButton as={Text} variant="subtitle1">
-          Notebook 4
+          Monitores
         </MenuButton>
         <MenuButton as={Text} variant="subtitle1">
-          Notebook 5
+          Periféricos
         </MenuButton>
         <MenuButton as={Text} variant="subtitle1">
-          Notebook 6
+          Licenças
         </MenuButton>
       </Menu>
     </Box>

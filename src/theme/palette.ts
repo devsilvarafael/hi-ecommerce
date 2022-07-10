@@ -2,6 +2,7 @@ const palette = {
   colors: {
     text: {
       primary: "#47484C",
+      secondary: "#1d1d1f",
     },
     button: {
       primary: "#A6A9AC",
