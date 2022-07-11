@@ -8,14 +8,11 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import { ProductItem } from "interfaces/Product";
-import useSWR from "swr";
-import api from "../../services/api";
-
-const fetcher = (url: string) => api.get(url).then((res) => res.data);
+import useRequests from "../../hooks/useRequests";
+import { ProductItem } from "../../interfaces/Product";
 
 const MostSoldProducts = () => {
-  const { data } = useSWR("/products?sort=desc&limit=3", fetcher);
+  const products = useRequests("/products?sort=desc&limit=3");
 
   return (
     <Box
@@ -30,11 +27,12 @@ const MostSoldProducts = () => {
         templateColumns="repeat(3, 1fr)"
         gap={4}
         maxH={635}
+        width="100%"
       >
-        {data &&
-          data.map((product: ProductItem) => (
-            <GridItem key={product.id} p={5} bgColor="#FFF">
-              <Center flexDirection="column">
+        {products &&
+          products.map((product: ProductItem) => (
+            <GridItem key={product.id} bgColor="#FFF" width="100%">
+              <Center flexDirection="column" p={5}>
                 <Heading
                   variant="h2"
                   fontSize="1.5rem"
@@ -53,11 +51,16 @@ const MostSoldProducts = () => {
                   objectFit="contain"
                   maxH={250}
                 />
-
-                <Button mt={12} size="lg" w={200} colorScheme="teal">
-                  Buy Now
-                </Button>
               </Center>
+              <Button
+                mt={12}
+                size="lg"
+                w="100%"
+                colorScheme="teal"
+                borderRadius={0}
+              >
+                Buy Now
+              </Button>
             </GridItem>
           ))}
       </Grid>
