@@ -1,5 +1,6 @@
 /* eslint-disable react/function-component-definition */
-import { Box, Menu, MenuButton, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
+import CategoryMenuItems from "./CategoryMenuItems";
 
 const TopMenuBar = () => (
   <Box
@@ -19,26 +20,7 @@ const TopMenuBar = () => (
       alignItems="center"
     >
       <Text variant="menu">Hi! </Text>
-      <Menu>
-        <MenuButton as={Text} variant="subtitle1">
-          Computadores
-        </MenuButton>
-        <MenuButton as={Text} variant="subtitle1">
-          Notebooks
-        </MenuButton>
-        <MenuButton as={Text} variant="subtitle1">
-          Acessórios
-        </MenuButton>
-        <MenuButton as={Text} variant="subtitle1">
-          Monitores
-        </MenuButton>
-        <MenuButton as={Text} variant="subtitle1">
-          Periféricos
-        </MenuButton>
-        <MenuButton as={Text} variant="subtitle1">
-          Licenças
-        </MenuButton>
-      </Menu>
+      <CategoryMenuItems />
     </Box>
   </Box>
 );
