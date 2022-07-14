@@ -10,3 +10,9 @@ export interface ProductItem {
     rate: number;
   };
 }
+
+export interface ProductGrid {
+  productTitle: string;
+  productPrice: number;
+  productImage: string;
+}
