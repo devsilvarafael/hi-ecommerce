@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react";
+import MostSoldEletronics from "@components/MostSoldEletronics/MostSoldEletronics";
 import MostSoldProducts from "@components/MostSoldProducts/MostSoldProducts";
 
 const Home = () => (
@@ -10,6 +11,7 @@ const Home = () => (
     mt="3rem"
   >
     <MostSoldProducts />
+    <MostSoldEletronics />
   </Box>
 );
 

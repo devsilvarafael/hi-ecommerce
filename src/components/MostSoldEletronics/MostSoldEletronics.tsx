@@ -1,15 +1,12 @@
 import { Box, Grid, Heading } from "@chakra-ui/react";
-
+import { ProductItem } from "interfaces/Product";
 import React, { Suspense } from "react";
-
 import useFetch from "../../hooks/useFetch";
 
-import { ProductItem } from "../../interfaces/Product";
-
-const MostSoldProducts = () => {
+const MostSoldEletronics = () => {
   const ProductsGrid = React.lazy(() => import("../ProductsGrid"));
 
-  const products = useFetch("/products?sort=desc&limit=3");
+  const eletronics = useFetch("/products/category/electronics");
 
   return (
     <Box
@@ -18,17 +15,17 @@ const MostSoldProducts = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Heading my={12}>Produtos de Vestuário mais vendidos</Heading>
-      <Suspense fallback={<h2>Loading, be pacient.</h2>}>
+      <Heading my={12}>Produtos Eletronicos</Heading>
+      <Suspense fallback={<h2>Loading eletronics</h2>}>
         <Grid
           templateRows="repeat(2, 1fr)"
           templateColumns="repeat(3, 1fr)"
           gap={4}
+          maxH={635}
           width="100%"
-          maxH={570}
         >
-          {products &&
-            products.map((product: ProductItem) => (
+          {eletronics &&
+            eletronics.map((product: ProductItem) => (
               <ProductsGrid
                 key={product.id}
                 productTitle={product.title}
@@ -42,4 +39,4 @@ const MostSoldProducts = () => {
   );
 };
 
-export default MostSoldProducts;
+export default MostSoldEletronics;

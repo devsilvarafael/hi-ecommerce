@@ -1,9 +1,8 @@
-/* eslint-disable react/no-array-index-key */
 import { Menu, MenuButton, Text } from "@chakra-ui/react";
-import useRequests from "../../hooks/useRequests";
+import useFetch from "../../hooks/useFetch";
 
 const CategoryMenuItems = () => {
-  const categories = useRequests("/products/categories");
+  const categories = useFetch("/products/categories");
 
   return (
     <Menu>
